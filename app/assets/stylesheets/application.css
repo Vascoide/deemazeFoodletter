@@ -58,3 +58,7 @@
     background-color: var(--smooth-blue);
     color: white;
 }
+
+.ignore-form-css form{
+    all:unset;
+}

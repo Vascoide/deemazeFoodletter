@@ -1,17 +1,19 @@
 <div class="row align-items-center main-content">
     <div class="col d-flex justify-content-center align-self-center">
         <div class="card text-center main-card">
-            <div class="card-body">
+            <div class="card-body ignore-form-css">
                 <h2 class="blue-highlight card-title-text">Restaurant Newsletter</h2>
                 <div class="d-flex justify-content-center align-self-center">
                     <p class="w-75"> Subscribe to our newsletter to get daily specialities of our best restaurants right in your mailbox. </p>
                 </div>
-                <div class="input-group mb-3 px-5">
-                    <input type="text" class="form-control email-subscription" aria-label="Email" aria-describedby="basic-addon2">
-                    <div class="input-group-append button-subscribe">
-                        <button class="btn" id="basic-addon2">Subscribe</button>
+                <%= form_with model: @email do |form| %>
+                    <div class="input-group mb-3 px-5">
+                        <%= form.text_field :email, class:"form-control email-subscription" %>
+                        <div class="input-group-append button-subscribe">
+                            <%= form.submit class:"btn" "Subscribe" %>
+                        </div>
                     </div>
-                </div>
+                <% end %>
             </div>
         </div>
     </div>

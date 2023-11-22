@@ -1,0 +1,16 @@
+<h1>Subscribers</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @emails.each do |mail| %>
+      <tr>
+        <td><%= mail.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
