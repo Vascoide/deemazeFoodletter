@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+ :root {
+    --smooth-blue: #4459A2;
+    --background: #C9D1D9;
+ }
+
+ html body {
+    height: 100vh;
+    background-color: var(--background);
+ }
+
+#mainContainer {
+    min-height: 100vh;
+}
+
+.main-content{
+    min-height: 95vh;
+}
+
+.main-card {
+    width: 32.5rem;
+}
+
+.footer-content {
+    min-height: 5vh;
+}
+
+.blue-highlight {
+    color: var(--smooth-blue);
+}
+
+.card-title-text {
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.main-card .email-subscription, 
+.main-card .button-subscribe {
+    border: 1px solid var(--smooth-blue);
+}
+
+.main-card .button-subscribe, .main-card .button-subscribe * {
+    background-color: var(--smooth-blue);
+    color: white;
+}
