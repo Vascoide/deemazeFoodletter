@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/emails/new', to: 'emails#new'
   post '/emails', to: 'emails#create'
 
-  get '/restaurants', to: 'emails#list'
+  get '/restaurants', to: 'restaurants#list'
   get '/addRestaurant', to: 'restaurants#new'
   post '/restaurants', to: 'restaurants#create'
   
