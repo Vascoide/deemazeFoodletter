@@ -17,7 +17,14 @@
                     </div>
                     <div class="form-group mb-3 px-5">
                         <label class="blue-highlight">Specialities</label>
-                        <%= form.text_field :name, class:"form-control" %>
+                        <div class="dishes">
+                            <%= form.fields_for :dishes do |dish| %>
+                                <%= render 'dish_fields', f: dish %>
+                            <% end %>
+                        </div>
+                        <div class="links mt-3">
+                            <%= link_to_add_association "Add more", form, :dishes, data: {association_insertion_node: '.dishes', association_insertion_method: :append}, class: "add-more-button" %>
+                        </div>
                     </div>
                     <%= form.submit class: "btn button-subscribe mb-3 " "Submit" %>
                     <%= link_to "Cancel", root_path, class:"blue-highlight d-block" %>

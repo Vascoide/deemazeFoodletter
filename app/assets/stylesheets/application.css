@@ -17,6 +17,7 @@
  :root {
     --smooth-blue: #4459A2;
     --background: #C9D1D9;
+    --add-more-color: #CED8FB;
  }
 
  html body {
@@ -42,6 +43,9 @@
 
 .blue-highlight {
     color: var(--smooth-blue);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .card-title-text {
@@ -61,4 +65,16 @@
 
 .ignore-form-css form{
     all:unset;
+}
+
+.add-more-button {
+    background-color: var(--add-more-color);
+    width: 115px;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--smooth-blue);
+    font-weight: bold;
+    line-height: 25px;
 }
