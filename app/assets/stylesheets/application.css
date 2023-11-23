@@ -48,6 +48,10 @@
     font-weight: 700;
 }
 
+.blue-link {
+    color: var(--smooth-blue);
+}
+
 .card-title-text {
     font-weight: 900;
     font-family: 'Playfair Display', serif;

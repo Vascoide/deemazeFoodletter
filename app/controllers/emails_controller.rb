@@ -9,6 +9,12 @@ class EmailsController < ApplicationController
 
     def create
         @email = Email.new(email_params)
+
+        respond_to do |format|
+          if @email.save
+            format.html { redirect_to request.referer, notice: "You are now subscribed to our newsletter." }
+          end
+        end
     end
 
     private
