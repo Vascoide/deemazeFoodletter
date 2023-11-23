@@ -6,7 +6,7 @@
                 <div class="d-flex justify-content-center align-self-center">
                     <p class="w-75"> Add your information and daily specialities. </p>
                 </div>
-                <%= form_with data: { turbo_confirm: 'Are you sure?' }, model: @restaurant do |form| %>
+                <%= form_with model: @restaurant do |form| %>
                     <div class="form-group mb-3 px-5 w-75 mx-auto">
                         <%= form.label :date, class: "blue-highlight"%>
                         <%= form.text_field :date, id: "datePicker" %>
@@ -27,6 +27,7 @@
                         </div>
                     </div>
                     <%= form.submit "Submit",
+                        data: { turbo_confirm: 'Are you sure?' },
                         class: "btn button-subscribe my-4"
                     %>
                     <%= link_to "Cancel", root_path, class:"blue-highlight d-block" %>
