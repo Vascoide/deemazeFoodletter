@@ -65,6 +65,9 @@
 .main-card .button-subscribe, .main-card .button-subscribe * {
     background-color: var(--smooth-blue);
     color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
 }
 
 .ignore-form-css form{
@@ -81,4 +84,7 @@
     color: var(--smooth-blue);
     font-weight: bold;
     line-height: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
 }
