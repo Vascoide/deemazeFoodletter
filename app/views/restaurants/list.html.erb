@@ -5,6 +5,7 @@
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Date</th>
+      <th scope="col">Dishes</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,13 @@
       <tr>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.date %></td>
+        <td>
+          <ul>
+            <% restaurant.dishes.each do |dish| %>
+                <li><%= dish.name %></li>
+            <% end %>
+          </ul>
+        </td>
       </tr>
     <% end %>
   </tbody>
