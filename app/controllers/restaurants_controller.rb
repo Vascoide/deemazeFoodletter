@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
     def new
         @restaurant = Restaurant.new
+        2.times { @restaurant.dishes.build }
     end
 
     def list

@@ -1,1 +1,18 @@
-<%= yield %>
+Hello There,
+
+Are you planning to have lunch in the neighborhood today? Check out what the restaurants nearby are offering:
+
+<% @restaurants.each do |restaurant| %>
+    <h2>
+        <%= restaurant.name %>
+    </h2>
+    <ul>
+        <% restaurant.dishes.each do |dish| %>
+            <li><%= dish.name %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+Enjoy your meal :D
+
+See you tomorrow
